@@ -3,6 +3,10 @@
     "browser": true,
     "es2021": true
   },
+  "globals": {
+    "window": true,
+    "module": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -17,6 +21,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
-    "no-console": 1
+    "no-console": 1,
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
   }
 }
