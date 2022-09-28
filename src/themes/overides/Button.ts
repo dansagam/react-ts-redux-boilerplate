@@ -78,6 +78,20 @@ export default function Button(theme: Theme): Components {
         disableRipple: true,
         size: "medium",
       },
+      variants: [
+        {
+          props: { color: "default" },
+          style: {
+            "&:hover": { backgroundColor: theme.palette.action.hover },
+          },
+        },
+        {
+          props: { color: "inherit" },
+          style: {
+            "&:hover": { backgroundColor: theme.palette.action.hover },
+          },
+        },
+      ],
     },
   };
 }
