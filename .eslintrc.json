@@ -23,6 +23,7 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "no-console": 1,
-    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "import/no-unresolved": "off"
   }
 }

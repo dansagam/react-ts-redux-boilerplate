@@ -1,9 +1,7 @@
 import { pxToRem } from "utils/formatFont";
-import { TypographyOptions, Typography } from "@mui/material/styles/createTypography";
+import { TypographyOptions } from "@mui/material/styles/createTypography";
 
-const getFontFamily = (value: string[]) => {
-  return value.join(",");
-};
+const getFontFamily = (value: string[]) => value.join(",");
 type FontMediaQueries = {
   md: number;
   sm: number;
