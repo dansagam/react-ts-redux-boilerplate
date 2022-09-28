@@ -1,5 +1,4 @@
 import { alpha, Shadows } from "@mui/material/styles";
-import { ShadowsProps } from "@mui/system";
 import palette from "./palette";
 
 const LIGHT_MODE = palette.grey[500];
