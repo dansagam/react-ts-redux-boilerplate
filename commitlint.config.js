@@ -40,6 +40,7 @@ module.exports = {
         "translation",
         "security",
         "changeset",
+        "install",
       ],
     ],
   },
