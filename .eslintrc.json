@@ -62,6 +62,16 @@
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "react/jsx-props-no-spreading": 0,
     "react/jsx-no-constructed-context-values": 0,
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "import/no-extraneous-dependencies": "off",
+    "arrow-body-style": 0,
+    "react/function-component-definition": [
+      1,
+      {
+        "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
+        "unnamedComponents": ["function-expression", "arrow-function"]
+      }
+    ],
+    "spaced-comment": 0
   }
 }

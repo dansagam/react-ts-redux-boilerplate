@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import { GlobalStyles as GlobalThemStyles } from "@mui/material";
 
-const GlobalStyles = () => {
+function GlobalStyles() {
   const theme = useTheme();
   return (
     <GlobalThemStyles
@@ -40,7 +40,7 @@ const GlobalStyles = () => {
           },
         },
         a: {
-          color: theme.palette.primary.lighter, //to change to lighter
+          color: theme.palette.primary.lighter,
           textDecoration: "none",
         },
         textarea: {
@@ -74,6 +74,6 @@ const GlobalStyles = () => {
       }}
     />
   );
-};
+}
 
 export default GlobalStyles;
