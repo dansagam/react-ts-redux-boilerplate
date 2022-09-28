@@ -56,6 +56,12 @@
     "./src/**/*.jsx": [
       "eslint --fix"
     ],
+    "./src/**/*.ts": [
+      "eslint --fix"
+    ],
+    "./src/**/*.tsx": [
+      "eslint --fix"
+    ],
     "./*.js": [
       "eslint --fix"
     ],
