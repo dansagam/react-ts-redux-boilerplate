@@ -51,25 +51,30 @@
       "prettier --write"
     ],
     "./src/**/*.js": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ],
     "./src/**/*.jsx": [
       "eslint --fix"
     ],
     "./src/**/*.ts": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ],
     "./src/**/*.tsx": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ],
     "./*.js": [
       "eslint --fix"
     ],
     "./*.ts": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ],
     "./*.tsx": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "husky": {
