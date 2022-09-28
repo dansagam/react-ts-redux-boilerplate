@@ -14,6 +14,7 @@ import breakpoints from "./breakpoints";
 import shape from "./shape";
 import shadows from "./shadows";
 import typography from "./typography";
+import ComponentOverides from "./overides";
 
 const jss = create({
   plugins: [...jssPreset().plugins, jssPluginSyntaxExtend()],
@@ -23,7 +24,7 @@ interface IThemes {
   children: React.ReactNode;
 }
 
-const ThemeConfig = ({ children }: IThemes) => {
+function ThemeConfig({ children }: IThemes) {
   const themeOptions = React.useMemo<ThemeOptions>(
     () => ({
       palette,
@@ -36,6 +37,7 @@ const ThemeConfig = ({ children }: IThemes) => {
   );
 
   const theme = createTheme(themeOptions);
+  theme.components = ComponentOverides(theme);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -50,6 +52,6 @@ const ThemeConfig = ({ children }: IThemes) => {
       </StylesProvider>
     </LocalizationProvider>
   );
-};
+}
 
 export default ThemeConfig;
