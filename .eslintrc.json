@@ -59,6 +59,8 @@
         "extensions": [".js", ".jsx", "ts", "tsx"]
       }
     ],
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-no-constructed-context-values": 0
   }
 }
