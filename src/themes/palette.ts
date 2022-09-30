@@ -40,11 +40,11 @@ const GREY = {
 };
 
 const PRIMARY = {
-  lighter: lighten("#fc7850", 5),
-  light: "#fc7850",
-  main: "#f15c2f",
-  dark: "#ba4320",
-  darker: darken("#ba4320", 5),
+  lighter: lighten("#3f87f2", 0.5),
+  light: "#3f87f2",
+  main: "#0050C8",
+  dark: "#272833",
+  darker: darken("#272833", 0.5),
   input: "#fff",
   lighterAlt: "#fff",
   tertiary: "#fff",
@@ -131,8 +131,8 @@ const COMMON = {
 const palette = {
   ...COMMON,
   text: {
-    primary: "#413A3A;",
-    secondary: "#605959",
+    primary: "#393A4A",
+    secondary: "#6B6C7E",
     disabled: "rgba(0, 0, 0, 0.38)",
   },
   background: {

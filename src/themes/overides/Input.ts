@@ -6,6 +6,7 @@ export default function Input(theme: Theme): Components {
       defaultProps: {
         variant: "outlined",
         size: "medium",
+        fullWidth: true,
       },
       styleOverrides: {
         root: {

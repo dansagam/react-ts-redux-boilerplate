@@ -1,13 +1,14 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import SignIn from "views/auth/pages/SignIn";
+import SignIn from "views/auth/pages/SignIn/SignIn";
+import Authentication from "..";
 
 function AuthRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<div>Auth</div>}>
+      <Route path="/" element={<Authentication />}>
         <Route path="/" element={<Navigate to="/signin" replace />} />
-        <Route path="login" element={<SignIn />} />
+        <Route path="signin" element={<SignIn />} />
       </Route>
     </Routes>
   );

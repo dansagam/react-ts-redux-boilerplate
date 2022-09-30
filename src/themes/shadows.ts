@@ -38,6 +38,4 @@ const createShadow = (color: string): Shadows => {
 
 const shadows = createShadow(LIGHT_MODE);
 
-console.log({ shadows });
-
 export default shadows;

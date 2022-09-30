@@ -1,11 +1,12 @@
 import React, { createContext, useState, useContext } from "react";
-import { IconButton, Snackbar, AlertProps } from "@mui/material";
+import { IconButton, Snackbar } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import MuiAlert from "@mui/material/Alert";
 import { IBasic } from "interfaces/basicInterface";
 
-function AlertRef({ ref, ...prop }: AlertProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function AlertRef(ref: any, prop: any) {
   return <MuiAlert ref={ref} variant="filled" {...prop} />;
 }
 

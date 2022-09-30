@@ -38,7 +38,7 @@ const typography: TypographyOptions = {
   },
   h2: {
     fontWeight: 600,
-    lineHeight: 1.1,
+    lineHeight: 1.5,
     fontSize: pxToRem(32),
     ...responsiveFontSizes({ sm: 28, md: 30, lg: 32 }),
   },
