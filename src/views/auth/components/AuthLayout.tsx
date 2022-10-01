@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import CircularProgress from "@mui/material/CircularProgress";
 import { ReactComponent as BgPeopleImage } from "assets/svg/landing-bg-illustration.svg";
 import Button from "@mui/material/Button";
 import { StyledSignContainer, StyledSignWrapper } from "./style";
@@ -48,11 +49,27 @@ const AuthLayout = ({
             <Box className="page-main-container">
               <Box component="form" onSubmit={onAction}>
                 <Box>{children}</Box>
-                <Box mt={1}>
-                  <Button color="primary" type="submit" fullWidth disabled={loading}>
-                    {btnText}
-                  </Button>
-                </Box>
+                <Button
+                  color="primary"
+                  type="submit"
+                  fullWidth
+                  disabled={loading}
+                  startIcon={
+                    loading && (
+                      <CircularProgress
+                        size={16}
+                        sx={{
+                          fontSize: 1,
+                        }}
+                      />
+                    )
+                  }
+                  sx={{
+                    mt: 1,
+                  }}
+                >
+                  {btnText}
+                </Button>
               </Box>
               {footerNode && <Box>{footerNode}</Box>}
             </Box>

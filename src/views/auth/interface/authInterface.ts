@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { UseFormRegister } from "react-hook-form/dist/types";
 
 export interface IAuthLayout {
   title: string;
@@ -10,4 +11,13 @@ export interface IAuthLayout {
   onAction: () => void;
   // onAction: React.FormEventHandler<HTMLFormElement> | React.MouseEventHandler<HTMLButtonElement>;
   loading?: boolean;
+}
+
+export interface LoginFieldTypes {
+  email: string;
+  password: string;
+}
+
+export interface ILogin {
+  register: UseFormRegister<LoginFieldTypes>;
 }

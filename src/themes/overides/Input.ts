@@ -21,6 +21,8 @@ export default function Input(theme: Theme): Components {
             },
           },
           textAlign: "left",
+          marginTop: "8px",
+          marginBottom: "8px",
         },
       },
     },

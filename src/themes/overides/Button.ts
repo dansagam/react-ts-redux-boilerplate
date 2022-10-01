@@ -17,6 +17,7 @@ export default function Button(theme: Theme): Components {
           "&:hover": {
             boxShadow: "none",
           },
+          cursor: "pointer",
         },
         sizeLarge: {
           height: 40,

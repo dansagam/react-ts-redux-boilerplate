@@ -72,6 +72,7 @@
         "unnamedComponents": ["function-expression", "arrow-function"]
       }
     ],
-    "spaced-comment": 0
+    "spaced-comment": 0,
+    "no-explicit-any": 0
   }
 }
