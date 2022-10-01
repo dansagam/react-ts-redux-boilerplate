@@ -21,3 +21,9 @@ export interface LoginFieldTypes {
 export interface ILogin {
   register: UseFormRegister<LoginFieldTypes>;
 }
+
+export interface IResetPassword {
+  password: string;
+  confirmPassword: string;
+  token?: string;
+}

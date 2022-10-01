@@ -24,4 +24,16 @@ export const StyledSignContainer = styled(Box)(({ theme }) => ({
       padding: "16px 24px",
     },
   },
+  "& .password-check": {
+    display: "flex",
+    flexWrap: "wrap",
+    marginTop: 2,
+    "& > *": {
+      margin: 6,
+    },
+    [theme.breakpoints.down("sm")]: {
+      // small screen
+      minWidth: "100%",
+    },
+  },
 }));
