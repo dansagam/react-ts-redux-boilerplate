@@ -13,6 +13,7 @@ export const StyledSignContainer = styled(Box)(({ theme }) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
+  zIndex: 99,
   "& .login-container": {
     borderRadius: "4px 4px 4px 4px",
     backgroundColor: theme.palette.common.white,

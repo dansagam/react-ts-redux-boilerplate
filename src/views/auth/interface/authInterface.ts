@@ -6,9 +6,9 @@ export interface IAuthLayout {
   subtile: string;
   mainTitle: string;
   children: ReactNode;
-  btnText: string;
+  btnText?: string;
   footerNode?: ReactNode;
-  onAction: () => void;
+  onAction?: () => void;
   // onAction: React.FormEventHandler<HTMLFormElement> | React.MouseEventHandler<HTMLButtonElement>;
   loading?: boolean;
 }

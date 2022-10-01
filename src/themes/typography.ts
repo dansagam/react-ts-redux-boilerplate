@@ -23,7 +23,7 @@ function responsiveFontSizes(font: FontMediaQueries) {
   };
 }
 
-const FONT_PRIMARY = getFontFamily(["Roboto", "Open Sans", "sans-serif"]);
+const FONT_PRIMARY = getFontFamily(["Ubuntu", "Roboto", "Open Sans", "sans-serif"]);
 
 const typography: TypographyOptions = {
   fontFamily: FONT_PRIMARY,
