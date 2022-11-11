@@ -5,11 +5,11 @@ import { baseThunkMethod } from "stores/thunks/baseThunkMethod";
 export const getAllAuth = baseThunkMethod("getAllAuth");
 
 interface AppInitial extends BaseAppStoreState {
-  user: { [x: string]: string };
+  user: { [x: string]: string } | null;
   users: { [x: string]: string }[];
 }
 const initialState: AppInitial = {
-  user: {},
+  user: null,
   users: [],
   loading: "idle",
   error: null,
