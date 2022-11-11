@@ -4,4 +4,5 @@ export interface BaseAppStoreState {
   status: string;
   loading: AppLoading;
   error: string | null;
+  loaded: string[];
 }

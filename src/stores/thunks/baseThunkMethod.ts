@@ -3,17 +3,23 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosResponse } from "axios";
 import authGeneral from "stores/services/auth";
 
-export type ApiFunc = (value: any) => Promise<any | AxiosResponse>;
+export type ApiFunc = <RS, RQ>(value: RQ) => Promise<AxiosResponse<RS>>;
 
 export const baseApi: Record<string, ApiFunc> = {
   getAllAuth: authGeneral.getAllAuth,
+  loginuser: authGeneral.loginUser,
+  createPassword: authGeneral.createPassword,
 };
 
-export const baseThunkMethod = (actionName: string) =>
-  createAsyncThunk(actionName, async (payload, { ...thunkAPi }) => {
+export const baseThunkMethod = <RS, RQ>(actionName: string) =>
+  createAsyncThunk<
+    RS,
+    RQ
+    // { rejectValue: string }
+  >(actionName, async (payload, { ...thunkAPi }) => {
     try {
-      const { data } = await baseApi[actionName](payload);
-      return data;
+      const response = await baseApi[actionName]<RS, RQ>(payload);
+      return response.data;
     } catch (err) {
       if (axios.isAxiosError(err)) {
         return thunkAPi.rejectWithValue(err.response);

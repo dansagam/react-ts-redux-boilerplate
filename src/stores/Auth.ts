@@ -1,6 +1,9 @@
 import jwtDecode, { JwtPayload } from "jwt-decode";
 
-export type IUserDecoded = JwtPayload;
+export interface IUserDecoded extends JwtPayload {
+  firstname: string;
+  lastname: string;
+}
 
 export default class Auth {
   static getDecodedJwt(tkn = ""): IUserDecoded {
@@ -35,8 +38,16 @@ export default class Auth {
     localStorage.setItem("accessToken", token);
   }
 
+  static setRefreshToken(token: string) {
+    localStorage.setItem("refreshToken", token);
+  }
+
   static getToken() {
     return localStorage.getItem("accessToken");
+  }
+
+  static getRefreshToken() {
+    return localStorage.getItem("refreshToken");
   }
 
   static removeToken() {
