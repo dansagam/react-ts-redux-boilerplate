@@ -14,6 +14,7 @@ import TableHead from "shared/Table/TableHead";
 import { DataSourceObjType, ITable, OrderType, TypeColumns } from "shared/Table/TableInterface";
 import { SortOrder } from "utils/constants";
 import { format, isValid } from "date-fns";
+import TablePaginationFooter from "./TablePagination";
 
 const Table = ({
   columns,
@@ -83,6 +84,15 @@ const Table = ({
       );
     });
   };
+  // Avoid a layout jump when reaching the last page with empty rows.
+  const emptyRows =
+    tableParams.pagination.pageNumber > 0
+      ? Math.max(
+          0,
+          (1 + tableParams.pagination.pageNumber) * tableParams.pagination.pageSize -
+            dataSource.length
+        )
+      : 0;
   return (
     <div>
       <Paper sx={{ width: "100%", mb: 2 }}>
@@ -97,7 +107,15 @@ const Table = ({
                   onSort={handleSort}
                   onFilter={handleFilter}
                 />
-                <TableBody>{renderDataItems()}</TableBody>
+                <TableBody>
+                  {renderDataItems()}
+                  {emptyRows > 0 && (
+                    <TableRow style={{ height: 53 * emptyRows }}>
+                      <TableCell colSpan={6} />
+                    </TableRow>
+                  )}
+                </TableBody>
+                <TablePaginationFooter setTableParams={setTableParams} tableParams={tableParams} />
               </>
             ) : (
               <Box mt={2} sx={{ display: "flex", justifyContent: "center" }}>

@@ -36,3 +36,8 @@ export interface ITableHead {
 }
 
 export type OrderType = "asc" | "desc";
+
+export interface ITableFooter {
+  tableParams: ITablePagination;
+  setTableParams: ITablePaginationFunction;
+}
